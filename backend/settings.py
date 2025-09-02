@@ -25,7 +25,19 @@ SECRET_KEY = 'django-insecure-5+jdc5)4u4y_q*a**)8rn-w*qpmi%4n4k0c!pcg-72^3+4@f7*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "161.97.172.247",      # IP
+    "surxon-ilmtafakkur.uz",  # (agar shu domen orqali ham kirilsa)
+    "localhost",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://161.97.172.247:8010",
+    "http://161.97.172.247",
+    "http://surxon-ilmtafakkur.uz",
+    # agar HTTPS bo'lsa shu ko‘rinishda:
+    # "https://surxon-ilmtafakkur.uz",
+]
 
 
 # Application definition
